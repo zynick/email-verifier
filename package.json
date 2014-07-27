@@ -1,0 +1,10 @@
+{
+  "name"         : "email-verifier",
+  "version"      : "0.0.1",
+  "description"  : "key in an email, and it will verify for you",
+  "main"         : "app.js",
+  "dependencies" : {
+    "request"    : "2.39.0",
+    "underscore" : "1.6.0"
+  }
+}
