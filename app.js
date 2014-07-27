@@ -65,7 +65,7 @@ function call(cookie, token) {
       var length = end - start;
       
       var data = body.substr(start, length);
-          data = data.replace('/<br/>/g', '\n');
+          data = data.replace(/<br\/>/g, '\n');
           data = decodeURIComponent(data);
           data = _.unescape(data);
       
