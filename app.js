@@ -58,6 +58,20 @@ function call(cookie, token) {
       }
     });
 
-    console.log(body);
+    var start = body.indexOf('<pre>');
+    if (start > 0) {
+      start += 5;
+      var end = body.indexOf('</pre>');
+      var length = end - start;
+      
+      var data = body.substr(start, length);
+          data = data.replace('<br/>', '\n');
+          data = decodeURIComponent(data);
+      
+      console.log(data);
+    } else {
+      console.log(body);
+    }
+    
   });
 }
